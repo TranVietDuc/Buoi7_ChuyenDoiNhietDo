@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1 style="font-size: 32px">Temperature Converter </h1>
+    <p>
+        <b>Type a value in the Faherenheit field to convert the value to Celcius</b>
+    </p>
+    Faherenheit : <input type="text" id="Fah"/> <input type="button" id="btn" value ="Convert" onclick="Converter()">
+    <br/>
+    Celcios : <div id="Cel"></div>
+</head>
+<body>
+<script>
+    function Converter(Fah)
+    {
+        Fah = parseFloat(document.getElementById("Fah").value);
+        var Cel = (Fah -32)/1.8;
+        document.getElementById("Cel").innerText= Cel;
+        document.getElementById("Fah").value = "";
+    }
+</script>
+</body>
+</html>
